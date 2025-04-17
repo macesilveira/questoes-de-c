@@ -13,5 +13,5 @@ int main (){
     printf("Cossecante: %f\n", 1/sin(graus));
     printf("Cotangente: %f\n", 1/tan(graus));
 
-
+    return 0;
 }

@@ -5,4 +5,5 @@ int main(){
     float pode_faltar= 1.0/4, aula_max_falta= aula_mes*pode_faltar;
     printf ("%.0f", aula_max_falta);
     
+    return 0;
 }

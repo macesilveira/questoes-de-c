@@ -8,4 +8,6 @@ int main (){
         numero_invertido=terceiro_numero*100+segundo_numero*10+primeiro_numero;
 
     printf("%d", numero_invertido);
+
+    return 0;
 }

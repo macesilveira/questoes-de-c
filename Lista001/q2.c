@@ -15,4 +15,5 @@ int main(){
     printf("\n13x10 = %d", 13*10);
     printf("\n-----------------");
     
+    return 0;
 }
