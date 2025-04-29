@@ -1,1 +1,1 @@
-Repositório para guardar meus exercícios e provas de C
+Repositório para guardar meus exercícios e provas de C no preparo para a matéria de Introdução à Lógica - IFBA - 2025.1
