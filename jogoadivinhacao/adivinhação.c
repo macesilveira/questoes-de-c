@@ -11,17 +11,24 @@ int main(){
     int numero_secreto=42, chute;
 
     // Pergunta ao jogador qual o chute dele
-    printf("Qual eh o seu chute? ");
+    printf("Chute um numero: ");
     scanf("%d", &chute);
     
     
     if (chute==numero_secreto){
         printf("Parabens! Voce acertou!");
-    } else{
-        printf("Voce errou.");
-        /*printf("Você errou. Quer tentar novamente? S=1/N=2\n");
-        if tentarnovamente==1*/
-    }
+    } 
+    else {
 
+        if (chute>numero_secreto){
+            printf("Seu chute foi maior que o Numero Secreto\n");
+            printf("Tente novamente!");
+            /*printf("Você errou. Quer tentar novamente? S=1/N=2\n");
+            if tentarnovamente==1*/
+        } 
+        else {
+            printf("Seu chute foi menor que o Numero Secreto\n");
+            printf("Tente novamente!");
+        }
 
 }
