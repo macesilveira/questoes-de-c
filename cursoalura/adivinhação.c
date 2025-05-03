@@ -8,7 +8,13 @@ int main(){
     printf(" Jogo de adivinhacao \n");
     printf("*********************\n");
 
-    int numero_secreto=42;
+    int numero_secreto=42, chute;
 
-    printf("%d", numero_secreto);
+
+
+    printf("Qual eh o seu chute? ");
+    scanf("%d", &chute);
+    printf("Seu chute foi %d\n", chute);
+
+
 }
