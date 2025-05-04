@@ -23,9 +23,10 @@ int main(){
     
         if (chute==numero_secreto){
             printf("Parabens! Voce acertou na tentativa %d", i);
+
+            break;
         } 
         else {
-            int contagem_tentativas=3-i;
             if (chute>numero_secreto){
                 printf("Seu chute foi MAIOR que o Numero Secreto\n");
                 /*printf("Você errou. Quer tentar novamente? S=1/N=2\n");
