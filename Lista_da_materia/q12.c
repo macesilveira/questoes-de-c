@@ -9,9 +9,9 @@ int main (){
     printf("Velocidade em Km/h: ");
     scanf("%f", &velocidade_kmh);
 
-    velocidade_ms= velocidade_kmh*3.6;
+    velocidade_kmh= velocidade_ms*3.6;
 
-    printf("%.1fkm/h em metros por segudo eh %.1f", velocidade_kmh, velocidade_ms);
+    printf("%.1fm/s em km/h eh %.1f", velocidade_ms, velocidade_kmh);
 
     return 0;
 }

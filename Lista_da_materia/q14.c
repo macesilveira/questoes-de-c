@@ -14,35 +14,43 @@ c. a aceleração típica dos carros */
 
 int main(){
 
-    int distanciaAB, distanciaBC;
-    float distancia_aceleracao, distancia_restante, velocidade_viakmh, velocidade_viams, aceleracao_constante, tempo_velocidade_permitida, tempo_semaforoB, tempo_semaforoC;
-    printf("------------------------------------------------\n");
-    printf("--------------Gestor de semáforos---------------\n");
-    printf("------------------------------------------------\n");
-    printf("Distancia do primeiro semaforo para o segundo: ");
+    int distanciaAB;
+    float distancia_aceleracao, distancia_restante, velocidade_viakmh, velocidade_viams, aceleracao_constante, tempo_velocidade_permitida, tempo_velocidade_restanteAB, 
+    tempo_total_semaforoAB,tempo_semaforoAB;
+    printf("----------------------------------------------------------------------------------\n");
+    printf("-------------------------------Gestor de semaforos--------------------------------\n");
+    printf("----------------------------------------------------------------------------------\n");
+    printf("Distancia do primeiro semaforo para o segundo (em metros): ");
     scanf("%d", &distanciaAB);
-    printf("Distancia do segundo semaforo para o terceiro: ");
-    scanf("%d", &distanciaBC);
     printf("Velocidade permitida na via (em Km/h): ");
     scanf("%f", &velocidade_viakmh);
     printf("Aceleracao de arrancada: ");
     scanf("%f", &aceleracao_constante);
+    printf("----------------------------------------------------------------------------------\n");
 
     // transformando a velocidade da via em m/s
-    velocidade_viams = velocidade_viakmh*3.6;
+    velocidade_viams = velocidade_viakmh/3.6;
 
     // tempo pra atingir a velocidade permitida
-    tempo_velocidade_permitida=velocidade_viakmh/aceleracao_constante;
+    tempo_velocidade_permitida=velocidade_viams/aceleracao_constante;
 
     // distancia percorrida durante a aceleração
-    distancia_aceleracao = (1/2)*aceleracao_constante*pow(tempo_velocidade_permitida,2);
+    distancia_aceleracao = (1/2.0)*aceleracao_constante*pow(tempo_velocidade_permitida,2);
 
-    //distancia restante
+    // distancia restante a ser percorrida entre o 1° semáforo e o 2°
     distancia_restante=distanciaAB-distancia_aceleracao;
 
+    // tempo para percorrer a distancia restante
+    tempo_velocidade_restanteAB=distancia_restante/velocidade_viams;
 
+    // tempo total pra um carro sair do 1° semaforo e chegar no 2°
+    tempo_total_semaforoAB=tempo_velocidade_permitida+tempo_velocidade_restanteAB;
 
-    printf("O semaforo B abrira %ds depois do semaforo A,ja o emaforo C abrira %ds depois.", tempo_semaforoB, tempo_semaforoC);
+    // tempo para o semaforo B abrir depois do A
+    tempo_semaforoAB = tempo_total_semaforoAB - 3;
+
+    printf("O tempo que leva para o segundo semaforo abrir depois do primeiro eh %.2f segundos\n", tempo_semaforoAB);
+    printf("----------------------------------------------------------------------------------");
 
     return 0;
 }
