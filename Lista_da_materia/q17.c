@@ -14,9 +14,20 @@ notas de R$1,00; R$2,00; R$5,00; R$10,00; R$20,00; R$50,00 e R$100,00) */
 
 int main(){
 
-    int quantia_solicitada;
+    int quantia_solicitada,num_notas_de100,num_notas_de50, num_notas_de20, num_notas_de10, num_notas_de5, num_notas_de2, num_notas_de1;
+    printf("Quantos reais voce quer sacar? ");
+    scanf("%d",&quantia_solicitada);
 
-    
+    num_notas_de100=quantia_solicitada/100;
+    num_notas_de50=(quantia_solicitada-(num_notas_de100*100))/50;
+    num_notas_de20=(quantia_solicitada-(num_notas_de100*100)-(num_notas_de50*50))/20;
+    num_notas_de10=(quantia_solicitada-(num_notas_de100*100)-(num_notas_de50*50)-(num_notas_de20*20))/10;
+    num_notas_de5=(quantia_solicitada-(num_notas_de100*100)-(num_notas_de50*50)-(num_notas_de20*20)-(num_notas_de10*10))/5;
+    num_notas_de2=(quantia_solicitada-(num_notas_de100*100)-(num_notas_de50*50)-(num_notas_de20*20)-(num_notas_de10*10)-(num_notas_de5*5))/2;
+    num_notas_de1=(quantia_solicitada-(num_notas_de100*100)-(num_notas_de50*50)-(num_notas_de20*20)-(num_notas_de10*10)-(num_notas_de5*5)-(num_notas_de2*2));
+
+    printf("%d nota(s) de 100 reais, %d nota(s) de 50 reais, %d nota(s) de 20 reais, %d nota(s) de 10 reais, %d nota(s) de 5 reais, %d nota(s) de 2 reais, %d nota(s) de 1 real."
+        ,num_notas_de100, num_notas_de50, num_notas_de20, num_notas_de10, num_notas_de5, num_notas_de2, num_notas_de1);
 
     return 0;
 }
