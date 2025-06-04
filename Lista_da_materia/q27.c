@@ -4,12 +4,20 @@
 
 int main(){
 	
-	float num1, num2, num3;
+	float num1, num2, num3, media;
 	
 	printf("Escreva 3 numeros: ");
 	scanf("%f %f %f",&num1, &num2, &num3);
 	
-
+	if (num1>=num2 && num1>=num3) {
+		media=(num1*5+num2*2.5+num3*2.5)/10.0;
+	} else if (num2>=num1 && num2>=num3){
+		media=(num2*5+num1*2.5+num3*2.5)/10.0;
+	} else {
+		media=(num3*5+num1*2.5+num2*2.5)/10.0;
+	}
 	
+	printf("A media ponderada dos numeros digitados eh: %.2f\n", media);
+
 	return 0;
 }
